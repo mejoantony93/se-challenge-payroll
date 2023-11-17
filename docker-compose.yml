@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+
+  payroll:
+    build:
+      context: Docker
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "7100:7100"
+    environment:
+      DB_NAME: DB_NAME
+      DB_USER: DB_USER
+      DB_PASS: DB_PASS
+      DB_HOST: DB_HOST
+      DB_PORT: DB_PORT
